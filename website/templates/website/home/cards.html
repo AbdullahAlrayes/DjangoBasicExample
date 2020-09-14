@@ -1,0 +1,19 @@
+{% load static %}
+
+
+<div class="row text-center">
+{% for obj in list %}
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card h-100">
+      <img class="card-img-top" src="{{obj.img_url}}" alt="">
+      <div class="card-body">
+        <h4 class="card-title">{{obj.title}}</h4>
+        <p class="card-text">{{obj.description}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="{% url 'webiste:details' %}" class="btn btn-primary">Find Out More!</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
